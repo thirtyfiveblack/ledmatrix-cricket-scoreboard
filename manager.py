@@ -47,8 +47,8 @@ class SoccerScoreboardPlugin(BasePlugin):
 
     # ESPN API endpoints for soccer leagues
     ESPN_API_URLS = {
-        'eng.1': 'https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard',
-        'esp.1': 'https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard',
+        'theashes.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1455609/scoreboard',
+        'sheffieldshield.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1495274/scoreboard',
         'ger.1': 'https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard',
         'ita.1': 'https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard',
         'fra.1': 'https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard',
