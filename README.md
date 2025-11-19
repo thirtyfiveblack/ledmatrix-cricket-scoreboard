@@ -1,6 +1,6 @@
-# Soccer Scoreboard Plugin
+# Cricket Scoreboard Plugin
 
-A plugin for LEDMatrix that displays live, recent, and upcoming soccer games across multiple leagues including Premier League, La Liga, Bundesliga, Serie A, Ligue 1, MLS, and more.
+A plugin for LEDMatrix that displays live, recent, and upcoming cricket games.
 
 ## Features
 
@@ -42,106 +42,6 @@ A plugin for LEDMatrix that displays live, recent, and upcoming soccer games acr
 }
 ```
 
-#### La Liga Configuration
-
-```json
-{
-  "leagues": {
-    "esp.1": {
-      "enabled": true,
-      "favorite_teams": ["Real Madrid", "Barcelona", "Atletico Madrid"],
-      "display_modes": {
-        "live": true,
-        "recent": true,
-        "upcoming": true
-      },
-      "recent_games_to_show": 5,
-      "upcoming_games_to_show": 10
-    }
-  }
-}
-```
-
-#### Bundesliga Configuration
-
-```json
-{
-  "leagues": {
-    "ger.1": {
-      "enabled": true,
-      "favorite_teams": ["Bayern Munich", "Borussia Dortmund", "RB Leipzig"],
-      "display_modes": {
-        "live": true,
-        "recent": true,
-        "upcoming": true
-      },
-      "recent_games_to_show": 5,
-      "upcoming_games_to_show": 10
-    }
-  }
-}
-```
-
-#### Serie A Configuration
-
-```json
-{
-  "leagues": {
-    "ita.1": {
-      "enabled": true,
-      "favorite_teams": ["Juventus", "Inter Milan", "AC Milan"],
-      "display_modes": {
-        "live": true,
-        "recent": true,
-        "upcoming": true
-      },
-      "recent_games_to_show": 5,
-      "upcoming_games_to_show": 10
-    }
-  }
-}
-```
-
-#### Ligue 1 Configuration
-
-```json
-{
-  "leagues": {
-    "fra.1": {
-      "enabled": true,
-      "favorite_teams": ["PSG", "Marseille", "Lyon"],
-      "display_modes": {
-        "live": true,
-        "recent": true,
-        "upcoming": true
-      },
-      "recent_games_to_show": 5,
-      "upcoming_games_to_show": 10
-    }
-  }
-}
-```
-
-#### MLS Configuration
-
-```json
-{
-  "leagues": {
-    "usa.1": {
-      "enabled": true,
-      "favorite_teams": ["LA Galaxy", "Seattle Sounders", "Atlanta United"],
-      "display_modes": {
-        "live": true,
-        "recent": true,
-        "upcoming": true
-      },
-      "recent_games_to_show": 5,
-      "upcoming_games_to_show": 10
-    }
-  }
-}
-```
-
 ## Display Modes
 
 The plugin supports three display modes:
@@ -155,34 +55,10 @@ The plugin supports three display modes:
 The plugin supports the following soccer leagues:
 
 - **eng.1**: Premier League (England)
-- **esp.1**: La Liga (Spain)
-- **ger.1**: Bundesliga (Germany)
-- **ita.1**: Serie A (Italy)
-- **fra.1**: Ligue 1 (France)
-- **usa.1**: MLS (USA)
-- **uefa.champions**: UEFA Champions League
-- **uefa.europa**: UEFA Europa League
 
 ## Team Names
 
 You can use either full team names or common abbreviations:
-
-- Manchester United, Man United, Man Utd
-- Liverpool, LFC
-- Arsenal, AFC
-- Real Madrid, RM
-- Barcelona, Barca, FCB
-- Bayern Munich, Bayern, FCB
-- Borussia Dortmund, BVB
-- Juventus, Juve
-- Inter Milan, Inter
-- AC Milan, Milan
-- PSG, Paris Saint-Germain
-- Marseille, OM
-- Lyon, OL
-- LA Galaxy, LA
-- Seattle Sounders, Seattle
-- Atlanta United, ATL UTD
 
 ## Background Service
 
