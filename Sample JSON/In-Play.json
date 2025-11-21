@@ -1,0 +1,842 @@
+{
+"leagues": [],
+"teams": [],
+"events": [
+{
+"id": "1455611",
+"uid": "s:200~e:1455611",
+"date": "2025-11-21T02:20Z",
+"endDate": "2025-11-26T23:59Z",
+"name": "Australia v England",
+"shortName": "AUS v ENG",
+"description": "1st Test, England tour of Australia at Perth, Nov 21-25 2025",
+"season": {},
+"competitions": [
+{
+"id": "1455611",
+"uid": "s:200~e:1455611~c:1455611",
+"description": "1st Test",
+"shortDescription": "1st Test,  at Perth",
+"date": "2025-11-21T02:20Z",
+"endDate": "2025-11-26T23:59Z",
+"timeValid": true,
+"neutralSite": true,
+"attendance": 0,
+"conferenceCompetition": false,
+"playByPlayAvailable": false,
+"fastcastAvailable": true,
+"recent": true,
+"class": {
+"internationalClassId": "1",
+"generalClassId": "4",
+"generalClassCard": "Test",
+"name": "Test matches",
+"eventType": "Test"
+},
+"venue": {
+"id": "1126475",
+"fullName": "Perth Stadium",
+"address": {
+"city": "Perth",
+"state": "",
+"country": "Australia",
+"summary": ""
+},
+"capacity": 0,
+"indoor": false
+},
+"competitors": [
+{
+"id": "2",
+"uid": "s:200~e:1455611~c:1455611~t:2",
+"type": "team",
+"order": 2,
+"homeAway": "home",
+"winner": "false",
+"score": "50/4 (23.2 ov)",
+"team": {
+"id": "2",
+"uid": "s:200~t:2",
+"location": "Australia",
+"name": "Australia",
+"abbreviation": "AUS",
+"displayName": "Australia",
+"shortDisplayName": "AUS",
+"isActive": true,
+"countryCode": "AU",
+"color": "#f3f702",
+"links": [
+{
+"rel": [
+"clubhouse",
+"desktop"
+],
+"href": "https://www.espn.in/cricket/team/_/id/2/australia",
+"text": "Clubhouse",
+"isExternal": false,
+"isPremium": false
+}
+],
+"logo": "https://a.espncdn.com/i/teamlogos/cricket/500/2.png"
+},
+"linescores": [
+{
+"period": 1,
+"value": 1,
+"displayValue": 1,
+"wickets": 0,
+"runs": 0,
+"overs": 32.5,
+"isBatting": false,
+"description": "all out",
+"isCurrent": 0
+},
+{
+"period": 2,
+"value": 2,
+"displayValue": 2,
+"wickets": 4,
+"runs": 50,
+"overs": 23.2,
+"isBatting": true,
+"description": "",
+"isCurrent": 1
+}
+],
+"leaders": {
+"$ref": "http://new.core.espnuk.org/v2/sports/cricket/leagues/22976/events/1455611/competitions/1455611/competitors/2/leaders"
+},
+"statistics": []
+},
+{
+"id": "1",
+"uid": "s:200~e:1455611~c:1455611~t:1",
+"type": "team",
+"order": 1,
+"homeAway": "away",
+"winner": "false",
+"score": "172",
+"team": {
+"id": "1",
+"uid": "s:200~t:1",
+"location": "England",
+"name": "England",
+"abbreviation": "ENG",
+"displayName": "England",
+"shortDisplayName": "ENG",
+"isActive": true,
+"countryCode": "www",
+"color": "#0673c1",
+"links": [
+{
+"rel": [
+"clubhouse",
+"desktop"
+],
+"href": "https://www.espn.in/cricket/team/_/id/1/england",
+"text": "Clubhouse",
+"isExternal": false,
+"isPremium": false
+}
+],
+"logo": "https://a.espncdn.com/i/teamlogos/cricket/500/1.png"
+},
+"linescores": [
+{
+"period": 1,
+"value": 1,
+"displayValue": 1,
+"wickets": 10,
+"runs": 172,
+"overs": 32.5,
+"isBatting": true,
+"description": "all out",
+"isCurrent": 0
+},
+{
+"period": 2,
+"value": 2,
+"displayValue": 2,
+"wickets": 0,
+"runs": 0,
+"overs": 23.2,
+"isBatting": false,
+"description": "",
+"isCurrent": 1
+}
+],
+"leaders": {
+"$ref": "http://new.core.espnuk.org/v2/sports/cricket/leagues/22976/events/1455611/competitions/1455611/competitors/1/leaders"
+},
+"statistics": []
+}
+],
+"status": {
+"clock": 0,
+"displayClock": "0'",
+"period": 2,
+"session": "Day 1  Session 3",
+"featuredAthletes": [],
+"summary": "Australia trail by 122 runs",
+"type": {
+"id": "0",
+"description": "Live",
+"detail": "Live",
+"shortDetail": "Live",
+"state": "in"
+}
+},
+"odds": [
+{
+"provider": {
+"id": 1,
+"name": "Bet 365",
+"priority": 0
+},
+"awayTeamOdds": {
+"team": {
+"id": "1",
+"abbreviation": "ENG",
+"displayName": "England",
+"shortDisplayName": "ENG"
+}
+},
+"homeTeamOdds": {
+"team": {
+"id": "2",
+"abbreviation": "AUS",
+"displayName": "Australia",
+"shortDisplayName": "AUS"
+}
+},
+"drawOdds": {
+"handicap": 0,
+"summary": "150/1",
+"value": 0
+},
+"links": [
+{
+"language": "en",
+"rel": [
+"home",
+"desktop",
+"hometeamodds",
+"bet-365",
+"desktop"
+],
+"href": "https://www.bet365.com/dl/sportsbookredirect?affiliate=365_307576&bs=185111088-7027250~5/6&bet=1",
+"text": "homeTeamOdds",
+"shortText": "Home Bet",
+"isExternal": true,
+"isPremium": false
+},
+{
+"language": "en",
+"rel": [
+"home",
+"desktop",
+"awayteamodds",
+"bet-365",
+"desktop"
+],
+"href": "https://www.bet365.com/dl/sportsbookredirect?affiliate=365_307576&bs=185111088-7027267~1/1&bet=1",
+"text": "awayTeamOdds",
+"shortText": "Away Bet",
+"isExternal": true,
+"isPremium": false
+},
+{
+"language": "en",
+"rel": [
+"home",
+"desktop",
+"drawodds",
+"bet-365",
+"desktop"
+],
+"href": "https://www.bet365.com/dl/sportsbookredirect?affiliate=365_307576&bs=185111088-7027258~150/1&bet=1",
+"text": "drawOdds",
+"shortText": "Draw Bet",
+"isExternal": true,
+"isPremium": false
+}
+]
+},
+{
+"provider": {
+"id": 1,
+"name": "Bet 365",
+"priority": 0
+}
+}
+],
+"broadcasts": [],
+"notes": [],
+"situation": {},
+"startDate": "2025-11-21T02:20Z",
+"broadcast": "",
+"geoBroadcasts": [],
+"highlights": [
+{
+"id": 47044910,
+"cerebroId": "692006e6dc5aba11903b7b21",
+"source": "espn",
+"headline": "Watch - Archer strikes in his first over",
+"description": "Jake Weatherald was dismissed for a duck on debut",
+"lastModified": "2025-11-21T06:38:56Z",
+"originalPublishDate": "2025-11-21T06:28:47Z",
+"duration": 42,
+"timeRestrictions": {
+"embargoDate": "2025-11-21T06:28:00Z",
+"expirationDate": "2026-03-31T10:30:00Z"
+},
+"deviceRestrictions": {
+"type": "whitelist",
+"devices": [
+"desktop",
+"ipad",
+"settop",
+"handset",
+"tablet"
+]
+},
+"geoRestrictions": {
+"type": "whitelist",
+"countries": [
+"IN"
+]
+},
+"thumbnail": "https://a.espncdn.com/media/motion/2025/1121/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL.jpg",
+"links": {
+"web": {
+"href": "https://www.espn.com/video/clip?id=47044910",
+"self": {
+"href": "https://www.espn.com/video/clip?id=47044910",
+"dsi": {
+"href": "https://www.espn.com/video/clip?id=50fe74de48115"
+}
+},
+"seo": {
+"href": "https://www.espn.com/video/clip/_/id/47044910"
+}
+},
+"mobile": {
+"source": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL.mp4"
+},
+"alert": {
+"href": "https://m.espn.com/general/video/videoAlert?vid=47044910"
+},
+"streaming": {
+"href": "https://watch.auth.api.espn.com/video/auth/brightcove/d3d2bdea-26f2-43cb-ac40-f005527654fd/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=47044910"
+},
+"progressiveDownload": {
+"href": "https://watch.auth.api.espn.com/video/auth/brightcove/d3d2bdea-26f2-43cb-ac40-f005527654fd/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=47044910"
+}
+},
+"api": {
+"self": {
+"href": "https://content.core.api.espn.com/v1/video/clips/47044910"
+},
+"artwork": {
+"href": "https://artwork.api.espn.com/artwork/collections/media/d3d2bdea-26f2-43cb-ac40-f005527654fd"
+}
+},
+"source": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL_360p30_1464k.mp4",
+"mezzanine": {
+"href": "https://media.video-origin.espn.com/espnvideo/2025/1121/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL.mp4"
+},
+"flash": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL.smil"
+},
+"hds": {
+"href": "https://hds.video-cdn.espn.com/z/motion/2025/1121/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL_rel.smil/manifest.f4m"
+},
+"HLS": {
+"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2025/1121/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL/playlist.m3u8",
+"HD": {
+"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2025/1121/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL/playlist.m3u8"
+},
+"cmaf": {
+"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2025/1121/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL/playlist.m3u8"
+},
+"shield": {
+"href": "https://watch.auth.api.espn.com/video/auth/media/d3d2bdea-26f2-43cb-ac40-f005527654fd/asset"
+}
+},
+"HD": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL_720p30_2896k.mp4"
+},
+"full": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL/dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL_360p30_1464k.mp4"
+}
+},
+"sportscenter": {
+"href": "sportscenter://x-callback-url/showVideo?videoID=47044910&videoDSI=50fe74de48115"
+}
+},
+"ad": {
+"sport": "Cricket",
+"bundle": "no_ad"
+},
+"tracking": {
+"sportName": "cricket",
+"leagueName": "England tour of Australia 2025/26",
+"coverageType": "Highlight",
+"trackingName": "INET_CRIC highlights ashes (t1d1 - aus wicket) non-branded GLOBAL",
+"trackingId": "dm_251121_INET_CRIC_highlights_ashes_t1d1_-_aus_wicket_non-branded_GLOBAL"
+}
+},
+{
+"id": 47044803,
+"cerebroId": "69200226db8b742d2aa282dc",
+"source": "espn",
+"headline": "Carse departs as Dogget gets another",
+"description": "The debutant has Carse holing out in the deep",
+"lastModified": "2025-11-21T06:33:55Z",
+"originalPublishDate": "2025-11-21T06:08:36Z",
+"duration": 43,
+"timeRestrictions": {
+"embargoDate": "2025-11-21T06:08:00Z",
+"expirationDate": "2026-03-31T10:30:00Z"
+},
+"deviceRestrictions": {
+"type": "whitelist",
+"devices": [
+"desktop",
+"ipad",
+"settop",
+"handset",
+"tablet"
+]
+},
+"geoRestrictions": {
+"type": "whitelist",
+"countries": [
+"IN"
+]
+},
+"thumbnail": "https://a.espncdn.com/media/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY.jpg",
+"links": {
+"web": {
+"href": "https://www.espn.com/video/clip?id=47044803",
+"self": {
+"href": "https://www.espn.com/video/clip?id=47044803",
+"dsi": {
+"href": "https://www.espn.com/video/clip?id=ebafaed58e1f5"
+}
+},
+"seo": {
+"href": "https://www.espn.com/video/clip/_/id/47044803"
+}
+},
+"mobile": {
+"source": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY.mp4"
+},
+"alert": {
+"href": "https://m.espn.com/general/video/videoAlert?vid=47044803"
+},
+"streaming": {
+"href": "https://watch.auth.api.espn.com/video/auth/brightcove/c87ef813-7251-4c23-80aa-afe04836b2a5/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=47044803"
+},
+"progressiveDownload": {
+"href": "https://watch.auth.api.espn.com/video/auth/brightcove/c87ef813-7251-4c23-80aa-afe04836b2a5/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=47044803"
+}
+},
+"api": {
+"self": {
+"href": "https://content.core.api.espn.com/v1/video/clips/47044803"
+},
+"artwork": {
+"href": "https://artwork.api.espn.com/artwork/collections/media/c87ef813-7251-4c23-80aa-afe04836b2a5"
+}
+},
+"source": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY_360p30_1464k.mp4",
+"mezzanine": {
+"href": "https://media.video-origin.espn.com/espnvideo/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY.mp4"
+},
+"flash": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY.smil"
+},
+"hds": {
+"href": "https://hds.video-cdn.espn.com/z/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY_rel.smil/manifest.f4m"
+},
+"HLS": {
+"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY/playlist.m3u8",
+"HD": {
+"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY/playlist.m3u8"
+},
+"cmaf": {
+"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY/playlist.m3u8"
+},
+"shield": {
+"href": "https://watch.auth.api.espn.com/video/auth/media/c87ef813-7251-4c23-80aa-afe04836b2a5/asset"
+}
+},
+"HD": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY_720p30_2896k.mp4"
+},
+"full": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY_360p30_1464k.mp4"
+}
+},
+"sportscenter": {
+"href": "sportscenter://x-callback-url/showVideo?videoID=47044803&videoDSI=ebafaed58e1f5"
+}
+},
+"ad": {
+"sport": "Cricket",
+"bundle": "no_ad"
+},
+"tracking": {
+"sportName": "cricket",
+"leagueName": "England tour of Australia 2025/26",
+"coverageType": "Highlight",
+"trackingName": "INET_CRIC ashes t1d1 carse wicket IND ONLY",
+"trackingId": "dm_251121_INET_CRIC_ashes_t1d1_carse_wicket_IND_ONLY"
+}
+},
+{
+"id": 47044800,
+"cerebroId": "69200187e4e160563afc632e",
+"source": "espn",
+"headline": "Watch - Starc bags five as Atkinson nicks off",
+"description": "That's a nothing shot from Atkinson, in the channel outside off, a limp poke and a firm edge to Smith at second slip",
+"lastModified": "2025-11-21T06:32:20Z",
+"originalPublishDate": "2025-11-21T06:05:20Z",
+"duration": 49,
+"timeRestrictions": {
+"embargoDate": "2025-11-21T06:05:00Z",
+"expirationDate": "2026-03-31T10:30:00Z"
+},
+"deviceRestrictions": {
+"type": "whitelist",
+"devices": [
+"desktop",
+"ipad",
+"settop",
+"handset",
+"tablet"
+]
+},
+"geoRestrictions": {
+"type": "whitelist",
+"countries": [
+"IN"
+]
+},
+"thumbnail": "https://a.espncdn.com/media/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY.jpg",
+"links": {
+"web": {
+"href": "https://www.espn.com/video/clip?id=47044800",
+"self": {
+"href": "https://www.espn.com/video/clip?id=47044800",
+"dsi": {
+"href": "https://www.espn.com/video/clip?id=018bc88478d6f"
+}
+},
+"seo": {
+"href": "https://www.espn.com/video/clip/_/id/47044800"
+}
+},
+"mobile": {
+"source": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY.mp4"
+},
+"alert": {
+"href": "https://m.espn.com/general/video/videoAlert?vid=47044800"
+},
+"streaming": {
+"href": "https://watch.auth.api.espn.com/video/auth/brightcove/5ab3cbc4-a3eb-4cdb-b72d-59ff8bfac70a/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=47044800"
+},
+"progressiveDownload": {
+"href": "https://watch.auth.api.espn.com/video/auth/brightcove/5ab3cbc4-a3eb-4cdb-b72d-59ff8bfac70a/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=47044800"
+}
+},
+"api": {
+"self": {
+"href": "https://content.core.api.espn.com/v1/video/clips/47044800"
+},
+"artwork": {
+"href": "https://artwork.api.espn.com/artwork/collections/media/5ab3cbc4-a3eb-4cdb-b72d-59ff8bfac70a"
+}
+},
+"source": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY_360p30_1464k.mp4",
+"mezzanine": {
+"href": "https://media.video-origin.espn.com/espnvideo/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY.mp4"
+},
+"flash": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY.smil"
+},
+"hds": {
+"href": "https://hds.video-cdn.espn.com/z/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY_rel.smil/manifest.f4m"
+},
+"HLS": {
+"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY/playlist.m3u8",
+"HD": {
+"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY/playlist.m3u8"
+},
+"cmaf": {
+"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY/playlist.m3u8"
+},
+"shield": {
+"href": "https://watch.auth.api.espn.com/video/auth/media/5ab3cbc4-a3eb-4cdb-b72d-59ff8bfac70a/asset"
+}
+},
+"HD": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY_720p30_2896k.mp4"
+},
+"full": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY_360p30_1464k.mp4"
+}
+},
+"sportscenter": {
+"href": "sportscenter://x-callback-url/showVideo?videoID=47044800&videoDSI=018bc88478d6f"
+}
+},
+"ad": {
+"sport": "Cricket",
+"bundle": "no_ad"
+},
+"tracking": {
+"sportName": "cricket",
+"leagueName": "England tour of Australia 2025/26",
+"coverageType": "Highlight",
+"trackingName": "INET_CRIC ashes t1d1 atkinson wicket non-branded IND ONLY",
+"trackingId": "dm_251121_INET_CRIC_ashes_t1d1_atkinson_wicket_non-branded_IND_ONLY"
+}
+},
+{
+"id": 47044776,
+"cerebroId": "6920011bdb8b742d2aa282ba",
+"source": "espn",
+"headline": "Watch - Doggett's maiden Test wicket",
+"description": "The fast bowler left Harry Brook in a tangle and had him gloving behind to the keeper",
+"lastModified": "2025-11-21T06:25:12Z",
+"originalPublishDate": "2025-11-21T06:04:07Z",
+"duration": 57,
+"timeRestrictions": {
+"embargoDate": "2025-11-21T06:04:00Z",
+"expirationDate": "2026-03-31T10:30:00Z"
+},
+"deviceRestrictions": {
+"type": "whitelist",
+"devices": [
+"desktop",
+"ipad",
+"settop",
+"handset",
+"tablet"
+]
+},
+"geoRestrictions": {
+"type": "whitelist",
+"countries": [
+"IN"
+]
+},
+"thumbnail": "https://a.espncdn.com/media/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY.jpg",
+"links": {
+"web": {
+"href": "https://www.espn.com/video/clip?id=47044776",
+"self": {
+"href": "https://www.espn.com/video/clip?id=47044776",
+"dsi": {
+"href": "https://www.espn.com/video/clip?id=caa12f7aab5ce"
+}
+},
+"seo": {
+"href": "https://www.espn.com/video/clip/_/id/47044776"
+}
+},
+"mobile": {
+"source": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY.mp4"
+},
+"alert": {
+"href": "https://m.espn.com/general/video/videoAlert?vid=47044776"
+},
+"streaming": {
+"href": "https://watch.auth.api.espn.com/video/auth/brightcove/c37dbf57-7d9c-471b-abd8-fbffc5e2b46b/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=47044776"
+},
+"progressiveDownload": {
+"href": "https://watch.auth.api.espn.com/video/auth/brightcove/c37dbf57-7d9c-471b-abd8-fbffc5e2b46b/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=47044776"
+}
+},
+"api": {
+"self": {
+"href": "https://content.core.api.espn.com/v1/video/clips/47044776"
+},
+"artwork": {
+"href": "https://artwork.api.espn.com/artwork/collections/media/c37dbf57-7d9c-471b-abd8-fbffc5e2b46b"
+}
+},
+"source": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY_360p30_1464k.mp4",
+"mezzanine": {
+"href": "https://media.video-origin.espn.com/espnvideo/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY.mp4"
+},
+"flash": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY.smil"
+},
+"hds": {
+"href": "https://hds.video-cdn.espn.com/z/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY_rel.smil/manifest.f4m"
+},
+"HLS": {
+"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY/playlist.m3u8",
+"HD": {
+"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY/playlist.m3u8"
+},
+"cmaf": {
+"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY/playlist.m3u8"
+},
+"shield": {
+"href": "https://watch.auth.api.espn.com/video/auth/media/c37dbf57-7d9c-471b-abd8-fbffc5e2b46b/asset"
+}
+},
+"HD": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY_720p30_2896k.mp4"
+},
+"full": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY_360p30_1464k.mp4"
+}
+},
+"sportscenter": {
+"href": "sportscenter://x-callback-url/showVideo?videoID=47044776&videoDSI=caa12f7aab5ce"
+}
+},
+"ad": {
+"sport": "Cricket",
+"bundle": "no_ad"
+},
+"tracking": {
+"sportName": "cricket",
+"leagueName": "England tour of Australia 2025/26",
+"coverageType": "Highlight",
+"trackingName": "INET_CRIC ashes t1d1 brooks wicket non-branded IND ONLY",
+"trackingId": "dm_251121_INET_CRIC_ashes_t1d1_brooks_wicket_non-branded_IND_ONLY"
+}
+},
+{
+"id": 47044443,
+"cerebroId": "691ff80ce4e160563afc5e77",
+"source": "espn",
+"headline": "Watch - Starc smashes Stokes' stumps",
+"description": "The Australia seamer is on fire with his fourth wicket for the day",
+"lastModified": "2025-11-21T05:35:55Z",
+"originalPublishDate": "2025-11-21T05:25:08Z",
+"duration": 40,
+"timeRestrictions": {
+"embargoDate": "2025-11-21T05:25:00Z",
+"expirationDate": "2026-03-31T10:30:00Z"
+},
+"deviceRestrictions": {
+"type": "whitelist",
+"devices": [
+"desktop",
+"ipad",
+"settop",
+"handset",
+"tablet"
+]
+},
+"geoRestrictions": {
+"type": "whitelist",
+"countries": [
+"IN"
+]
+},
+"thumbnail": "https://a.espncdn.com/media/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY.jpg",
+"links": {
+"web": {
+"href": "https://www.espn.com/video/clip?id=47044443",
+"self": {
+"href": "https://www.espn.com/video/clip?id=47044443",
+"dsi": {
+"href": "https://www.espn.com/video/clip?id=01629fb634bd7"
+}
+},
+"seo": {
+"href": "https://www.espn.com/video/clip/_/id/47044443"
+}
+},
+"mobile": {
+"source": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY.mp4"
+},
+"alert": {
+"href": "https://m.espn.com/general/video/videoAlert?vid=47044443"
+},
+"streaming": {
+"href": "https://watch.auth.api.espn.com/video/auth/brightcove/fd77e1fd-8544-4062-9e73-9dd83d86c3dd/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=47044443"
+},
+"progressiveDownload": {
+"href": "https://watch.auth.api.espn.com/video/auth/brightcove/fd77e1fd-8544-4062-9e73-9dd83d86c3dd/asset?UMADPARAMreferer=https://www.espn.com/video/clip?id=47044443"
+}
+},
+"api": {
+"self": {
+"href": "https://content.core.api.espn.com/v1/video/clips/47044443"
+},
+"artwork": {
+"href": "https://artwork.api.espn.com/artwork/collections/media/fd77e1fd-8544-4062-9e73-9dd83d86c3dd"
+}
+},
+"source": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY_360p30_1464k.mp4",
+"mezzanine": {
+"href": "https://media.video-origin.espn.com/espnvideo/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY.mp4"
+},
+"flash": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY.smil"
+},
+"hds": {
+"href": "https://hds.video-cdn.espn.com/z/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY_rel.smil/manifest.f4m"
+},
+"HLS": {
+"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY/playlist.m3u8",
+"HD": {
+"href": "https://service-pkgespn.akamaized.net/opp/hls/espn/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY/playlist.m3u8"
+},
+"cmaf": {
+"href": "https://service-pkgespn.akamaized.net/opp/cmaf/espn/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY/playlist.m3u8"
+},
+"shield": {
+"href": "https://watch.auth.api.espn.com/video/auth/media/fd77e1fd-8544-4062-9e73-9dd83d86c3dd/asset"
+}
+},
+"HD": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY_720p30_2896k.mp4"
+},
+"full": {
+"href": "https://media.video-cdn.espn.com/motion/2025/1121/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY/dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY_360p30_1464k.mp4"
+}
+},
+"sportscenter": {
+"href": "sportscenter://x-callback-url/showVideo?videoID=47044443&videoDSI=01629fb634bd7"
+}
+},
+"ad": {
+"sport": "Cricket",
+"bundle": "no_ad"
+},
+"tracking": {
+"sportName": "Cricket",
+"leagueName": "19430",
+"coverageType": "Highlight",
+"trackingName": "INET_CRIC ashes t1d1 stokes wicket non-branded IND ONLY",
+"trackingId": "dm_251121_INET_CRIC_ashes_t1d1_stokes_wicket_non-branded_IND_ONLY"
+}
+}
+]
+}
+],
+"links": [],
+"status": {}
+}
+]
+}
