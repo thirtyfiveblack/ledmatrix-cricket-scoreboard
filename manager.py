@@ -86,6 +86,9 @@ class CricketScoreboardPlugin(BasePlugin):
         self.current_display_mode = None
         self.last_update = 0
         self.initialized = True
+                     
+        # Load fonts for rendering
+        self.fonts = self._load_fonts()
 
         # Register fonts
         self._register_fonts()
