@@ -400,6 +400,60 @@ class CricketScoreboardPlugin(BasePlugin):
         """Check if there are any recent games available."""
         return any(game.get('status', {}).get('state') == 'post' for game in self.current_games)
 
+    def _load_team_logo(self, team: Dict, league: str) -> Optional[Image.Image]:
+        """Load and resize team logo - matching football plugin logic."""
+        try:
+            # Get logo directory from league configuration
+            league_config = self.leagues.get(league, {})
+            logo_dir = league_config.get('logo_dir', 'assets/sports/mlb_logos')
+            
+            # Convert relative path to absolute path by finding LEDMatrix project root
+            if not os.path.isabs(logo_dir):
+                current_dir = os.path.dirname(os.path.abspath(__file__))
+                ledmatrix_root = None
+                for parent in [current_dir, os.path.dirname(current_dir), os.path.dirname(os.path.dirname(current_dir))]:
+                    if os.path.exists(os.path.join(parent, 'assets', 'sports')):
+                        ledmatrix_root = parent
+                        break
+                
+                if ledmatrix_root:
+                    logo_dir = os.path.join(ledmatrix_root, logo_dir)
+                else:
+                    logo_dir = os.path.abspath(logo_dir)
+            
+            team_abbrev = team.get('abbrev', '')
+            if not team_abbrev:
+                return None
+            
+            # Try different case variations and extensions
+            logo_extensions = ['.png', '.jpg', '.jpeg']
+            logo_path = None
+            abbrev_variations = [team_abbrev.upper(), team_abbrev.lower(), team_abbrev]
+            
+            for abbrev in abbrev_variations:
+                for ext in logo_extensions:
+                    potential_path = os.path.join(logo_dir, f"{abbrev}{ext}")
+                    if os.path.exists(potential_path):
+                        logo_path = potential_path
+                        break
+                if logo_path:
+                    break
+            
+            if not logo_path:
+                return None
+            
+            # Load and resize logo (matching original managers)
+            logo = Image.open(logo_path).convert('RGBA')
+            max_width = int(self.display_manager.matrix.width * 1.5)
+            max_height = int(self.display_manager.matrix.height * 1.5)
+            logo.thumbnail((max_width, max_height), Image.Resampling.LANCZOS)
+            
+            return logo
+            
+        except Exception as e:
+            self.logger.debug(f"Could not load logo for {team.get('abbrev', 'unknown')}: {e}")
+            return None
+    
     def _display_game(self, game: Dict, mode: str):
         """Display a single game."""
         try:
@@ -420,15 +474,63 @@ class CricketScoreboardPlugin(BasePlugin):
             away_name = away_team.get('name', 'AWAY')
 
             # TODO: Add team logos if available
+            # Load team logos
+            home_logo = self._load_team_logo(home_team, game.get('league', ''))
+            away_logo = self._load_team_logo(away_team, game.get('league', ''))
+
             # TODO: Use font manager for text rendering
             # TODO: Add scores, time, half display
 
-            # For now, simple text display (placeholder)
-            draw.text((5, 5), f"{away_name} @ {home_name}", fill=(255, 255, 255))
-            draw.text((5, 15), f"{away_team.get('score', 0)} - {home_team.get('score', 0)}", fill=(255, 200, 0))
-            draw.text((5, 25), status.get('short_detail', ''), fill=(0, 255, 0))
+            if home_logo and away_logo:
 
-            self.display_manager.image = img.copy()
+                # Draw logos (matching original positioning)
+                center_y = matrix_height // 2
+                home_x = matrix_width - home_logo.width + 10
+                home_y = center_y - (home_logo.height // 2)
+                main_img.paste(home_logo, (home_x, home_y), home_logo)
+                
+                away_x = -10
+                away_y = center_y - (away_logo.height // 2)
+                main_img.paste(away_logo, (away_x, away_y), away_logo)
+
+                # Draw scores (centered)
+                home_score = str(home_team.get('score', 0))
+                away_score = str(away_team.get('score', 0))
+                score_text = f"{away_score}-{home_score}"
+                
+                score_width = draw_overlay.textlength(score_text, font=self.fonts['score'])
+                score_x = (matrix_width - score_width) // 2
+                score_y = (matrix_height // 2) - 3
+                self._draw_text_with_outline(draw_overlay, score_text, (score_x, score_y), self.fonts['score'], fill=(255, 200, 0))
+                
+                # Inning/Status (top center)
+                if status.get('state') == 'post':
+                    status_text = "FINAL"
+                elif status.get('state') == 'pre':
+                    status_text = "UPCOMING"
+                else:
+                    # Live game - show inning
+                    status_text = status.get('detail', status.get('short_detail', ''))
+                
+                status_width = draw_overlay.textlength(status_text, font=self.fonts['time'])
+                status_x = (matrix_width - status_width) // 2
+                status_y = 1
+                self._draw_text_with_outline(draw_overlay, status_text, (status_x, status_y), self.fonts['time'], fill=(0, 255, 0))
+                
+                # Composite and display
+                final_img = Image.alpha_composite(main_img, overlay)
+                self.display_manager.image = final_img.convert('RGB').copy()
+
+            else:
+
+                # For now, simple text display (placeholder)
+                draw.text((5, 5), f"{away_name} @ {home_name}", fill=(255, 255, 255))
+                draw.text((5, 15), f"{away_team.get('score', 0)} - {home_team.get('score', 0)}", fill=(255, 200, 0))
+                draw.text((5, 25), status.get('short_detail', ''), fill=(0, 255, 0))
+    
+                self.display_manager.image = img.copy()
+
+            
             self.display_manager.update_display()
 
         except Exception as e:
