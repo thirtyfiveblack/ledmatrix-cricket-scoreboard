@@ -465,6 +465,11 @@ class CricketScoreboardPlugin(BasePlugin):
             img = Image.new('RGB', (matrix_width, matrix_height), (0, 0, 0))
             draw = ImageDraw.Draw(img)
 
+            # Create image with transparency support
+            main_img = Image.new('RGBA', (matrix_width, matrix_height), (0, 0, 0, 255))
+            overlay = Image.new('RGBA', (matrix_width, matrix_height), (0, 0, 0, 0))
+            draw_overlay = ImageDraw.Draw(overlay)
+            
             # Get team info
             home_team = game.get('home_team', {})
             away_team = game.get('away_team', {})
