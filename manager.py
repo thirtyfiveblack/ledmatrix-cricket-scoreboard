@@ -99,6 +99,27 @@ class CricketScoreboardPlugin(BasePlugin):
         self.logger.info("Cricket scoreboard plugin initialized")
         self.logger.info(f"Enabled leagues: {enabled_leagues}")
 
+    def _load_fonts(self):
+        """Load fonts used by the scoreboard - matching original managers."""
+        fonts = {}
+        try:
+            fonts['score'] = ImageFont.truetype("assets/fonts/PressStart2P-Regular.ttf", 10)
+            fonts['time'] = ImageFont.truetype("assets/fonts/PressStart2P-Regular.ttf", 8)
+            fonts['team'] = ImageFont.truetype("assets/fonts/PressStart2P-Regular.ttf", 8)
+            fonts['status'] = ImageFont.truetype("assets/fonts/4x6-font.ttf", 6)
+            fonts['detail'] = ImageFont.truetype("assets/fonts/4x6-font.ttf", 6)
+            fonts['rank'] = ImageFont.truetype("assets/fonts/PressStart2P-Regular.ttf", 10)
+            self.logger.info("Successfully loaded fonts")
+        except IOError as e:
+            self.logger.warning(f"Fonts not found, using default PIL font: {e}")
+            fonts['score'] = ImageFont.load_default()
+            fonts['time'] = ImageFont.load_default()
+            fonts['team'] = ImageFont.load_default()
+            fonts['status'] = ImageFont.load_default()
+            fonts['detail'] = ImageFont.load_default()
+            fonts['rank'] = ImageFont.load_default()
+        return fonts
+    
     def _register_fonts(self):
         """Register fonts with the font manager."""
         try:
