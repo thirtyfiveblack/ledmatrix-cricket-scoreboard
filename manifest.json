@@ -21,7 +21,7 @@
   "last_updated": "2025-10-12",
   "verified": true,
   "screenshot": "",
-  "class_name": "CricketScoreboard",
+  "class_name": "CricketScoreboardPlugin",
   "display_modes": [
     "cricket_live",
     "cricket_recent",
