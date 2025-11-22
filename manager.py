@@ -437,7 +437,7 @@ class CricketScoreboardPlugin(BasePlugin):
             # Get logo directory from league configuration
             league_config = self.leagues.get(league, {})
             #logo_dir = league_config.get('logo_dir', 'assets/sports/cricket_logos')
-            logo_dir = league_config.get('logo_dir', 'plugins-repo/cricket-scoreboard/logos')
+            logo_dir = league_config.get('logo_dir', 'plugin-repos/cricket-scoreboard/logos')
             
             # Convert relative path to absolute path by finding LEDMatrix project root
             if not os.path.isabs(logo_dir):
