@@ -551,13 +551,13 @@ class CricketScoreboardPlugin(BasePlugin):
 
                 summary_text = status.get('summary','')
                 summary_width = draw_overlay.textlength(summary_text, font=self.fonts['score'])
-                summary_x = (matrix_width - score_width) // 2
+                summary_x = (matrix_width - summary_width) // 2
                 summary_y = (matrix_height // 2)
                 self._draw_text_with_outline(draw_overlay, summary_text, (summary_x, summary_y), self.fonts['score'], fill=(255, 200, 0))
                 
                 session_text = status.get('session','')
                 session_width = draw_overlay.textlength(session_text, font=self.fonts['score'])
-                session_x = (matrix_width - score_width) // 2
+                session_x = (matrix_width - session_width) // 2
                 session_y = (matrix_height // 2) + 5
                 self._draw_text_with_outline(draw_overlay, session_text, (session_x, session_y), self.fonts['score'], fill=(255, 200, 0))
                 
