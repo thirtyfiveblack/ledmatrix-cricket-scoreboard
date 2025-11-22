@@ -536,36 +536,22 @@ class CricketScoreboardPlugin(BasePlugin):
 
                 # Draw logos (matching original positioning)
                 center_y = matrix_height // 2
-                home_x = matrix_width - home_logo.width + 10
+                #home_x = matrix_width - home_logo.width + 10
+                home_x = -10
                 home_y = center_y - (home_logo.height // 2)
                 main_img.paste(home_logo, (home_x, home_y), home_logo)
                 
-                away_x = -10
+                #away_x = -10
+                away_x = matrix_width - away_logo.width + 10
                 away_y = center_y - (away_logo.height // 2)
                 main_img.paste(away_logo, (away_x, away_y), away_logo)
 
                 # Draw scores (centered)
                 home_score = str(home_team.get('score', 0))
                 away_score = str(away_team.get('score', 0))
-                score_text = f"{away_score}-{home_score}"
+                #score_text = f"{away_score}-{home_score}"
+                score_text = f"{home_score}-{away_score}"
 
-                summary_text = status.get('summary','')
-                summary_width = draw_overlay.textlength(summary_text, font=self.fonts['score'])
-                summary_x = (matrix_width - summary_width) // 2
-                summary_y = (matrix_height // 2) + 11
-                self._draw_text_with_outline(draw_overlay, summary_text, (summary_x, summary_y), self.fonts['score'], fill=(255, 200, 0))
-                
-                session_text = status.get('session','')
-                session_width = draw_overlay.textlength(session_text, font=self.fonts['score'])
-                session_x = (matrix_width - session_width) // 2
-                session_y = 11
-                self._draw_text_with_outline(draw_overlay, session_text, (session_x, session_y), self.fonts['score'], fill=(255, 200, 0))
-                
-                score_width = draw_overlay.textlength(score_text, font=self.fonts['score'])
-                score_x = (matrix_width - score_width) // 2
-                score_y = (matrix_height // 2)
-                self._draw_text_with_outline(draw_overlay, score_text, (score_x, score_y), self.fonts['score'], fill=(255, 200, 0))
-                
                 # Inning/Status (top center)
                 if status.get('state') == 'post':
                     status_text = "FINAL"
@@ -579,6 +565,23 @@ class CricketScoreboardPlugin(BasePlugin):
                 status_x = (matrix_width - status_width) // 2
                 status_y = 1
                 self._draw_text_with_outline(draw_overlay, status_text, (status_x, status_y), self.fonts['time'], fill=(0, 255, 0))
+                
+                session_text = status.get('session','')
+                session_width = draw_overlay.textlength(session_text, font=self.fonts['score'])
+                session_x = (matrix_width - session_width) // 2
+                session_y = 11
+                self._draw_text_with_outline(draw_overlay, session_text, (session_x, session_y), self.fonts['score'], fill=(255, 200, 0))
+                
+                score_width = draw_overlay.textlength(score_text, font=self.fonts['score'])
+                score_x = (matrix_width - score_width) // 2
+                score_y = (matrix_height // 2) - 5
+                self._draw_text_with_outline(draw_overlay, score_text, (score_x, score_y), self.fonts['detail'], fill=(255, 255, 255))
+
+                summary_text = status.get('summary','')
+                summary_width = draw_overlay.textlength(summary_text, font=self.fonts['score'])
+                summary_x = (matrix_width - summary_width) // 2
+                summary_y = (matrix_height // 2) + 11
+                self._draw_text_with_outline(draw_overlay, summary_text, (summary_x, summary_y), self.fonts['score'], fill=(255, 200, 0))
                 
                 # Composite and display
                 final_img = Image.alpha_composite(main_img, overlay)
