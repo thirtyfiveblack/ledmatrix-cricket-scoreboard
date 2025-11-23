@@ -166,8 +166,8 @@ class CricketScoreboardPlugin(BasePlugin):
             font_manager.register_manager_font(
                 manager_id=self.plugin_id,
                 element_key=f"{self.plugin_id}.detail",
-                family="four_by_six",
-                size_px=11,
+                family="press_start",
+                size_px=10,
                 color=(200, 200, 200)
             )
 
@@ -583,16 +583,16 @@ class CricketScoreboardPlugin(BasePlugin):
                 session_y = 11
                 self._draw_text_with_outline(draw_overlay, session_text, (session_x, session_y), self.fonts['score'], fill=(255, 200, 0))
                 
-                score_width = draw_overlay.textlength(score_text, font=self.fonts['score'])
+                score_width = draw_overlay.textlength(score_text, font=self.fonts['detail'])
                 score_x = (matrix_width - score_width) // 2
                 score_y = (matrix_height // 2) - 5
-                self._draw_text_with_outline(draw_overlay, score_text, (score_x, score_y), self.fonts['score'], fill=(255, 255, 255))
+                self._draw_text_with_outline(draw_overlay, score_text, (score_x, score_y), self.fonts['detail'], fill=(255, 255, 255))
 
                 summary_text = status.get('summary','')
-                summary_width = draw_overlay.textlength(summary_text, font=self.fonts['score'])
+                summary_width = draw_overlay.textlength(summary_text, font=self.fonts['detail'])
                 summary_x = (matrix_width - summary_width) // 2
                 summary_y = (matrix_height // 2) + 11
-                self._draw_text_with_outline(draw_overlay, summary_text, (summary_x, summary_y), self.fonts['score'], fill=(255, 200, 0))
+                self._draw_text_with_outline(draw_overlay, summary_text, (summary_x, summary_y), self.fonts['detail'], fill=(255, 200, 0))
                 
                 # Composite and display
                 final_img = Image.alpha_composite(main_img, overlay)
