@@ -310,6 +310,9 @@ class CricketScoreboardPlugin(BasePlugin):
                     #'score': int(home_team.get('score', 0)),
                     'score': home_team.get('score', 'Unknown'),
                     'logo': home_team.get('team', {}).get('logo')
+                    'wickets': home_team.get('linescores', {}).get('wickets')
+                    'runs': home_team.get('linescores', {}).get('runs')
+                    'overs': home_team.get('linescores', {}).get('overs')
                 },
                 'away_team': {
                     'name': away_team.get('team', {}).get('displayName', 'Unknown'),
@@ -317,6 +320,9 @@ class CricketScoreboardPlugin(BasePlugin):
                     #'score': int(away_team.get('score', 0)),
                     'score': away_team.get('score', 'Unknown'),
                     'logo': away_team.get('team', {}).get('logo')
+                    'wickets': away_team.get('linescores', {}).get('wickets')
+                    'runs': away_team.get('linescores', {}).get('runs')
+                    'overs': away_team.get('linescores', {}).get('overs')
                 },
                 'status': {
                     'state': status.get('type', {}).get('state', 'unknown'),
