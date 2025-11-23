@@ -4,11 +4,11 @@ A plugin for [LEDMatrix](https://github.com/ChuckBuilds/LEDMatrix) that displays
 
 ## Features
 
-- **Multiple League Support**: Premier League, La Liga, Bundesliga, Serie A, Ligue 1, MLS, Champions League, Europa League, and more
-- **Live Game Tracking**: Real-time scores, match time, and half information
+- **Multiple League Support**: The Ashes, Sheffield Shield, WBBL & BBL
+- **Live Game Tracking**: Real-time scores, match status & results
 - **Recent Games**: Recently completed games with final scores
 - **Upcoming Games**: Scheduled games with start times
-- **Favorite Teams**: Prioritize games involving your favorite teams
+- **Favorite Teams**: Prioritise games involving your favorite teams
 - **Background Data Fetching**: Efficient API calls without blocking display
 
 ## Configuration
