@@ -328,7 +328,7 @@ class CricketScoreboardPlugin(BasePlugin):
                     'state': status.get('type', {}).get('state', 'unknown'),
                     'detail': status.get('type', {}).get('detail', ''),
                     'short_detail': status.get('type', {}).get('shortDetail', ''),
-                    #'description': status.get('type', {}).get('description', ''),
+                    'description': status.get('type', {}).get('description', ''),
                     'period': status.get('period', 0),
                     'display_clock': status.get('displayClock', ''),
                     'summary': status.get('summary',''),
@@ -560,9 +560,9 @@ class CricketScoreboardPlugin(BasePlugin):
                 score_text = f"{home_score}-{away_score}"
 
                 # Inning/Status (top center)
-                if status.get('description') == 'Innings break':
-                    status_text = status.get('description','Live')
-                elif status.get('state') == 'post':
+                #if status.get('description') == 'Innings break':
+                    #status_text = status.get('description','Live')
+                if status.get('state') == 'post':
                     status_text = status.get('summary','Live')
                 elif status.get('state') == 'post':
                     status_text = status.get('summary','Final')
