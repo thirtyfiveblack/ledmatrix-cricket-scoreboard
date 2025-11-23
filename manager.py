@@ -328,6 +328,7 @@ class CricketScoreboardPlugin(BasePlugin):
                     'state': status.get('type', {}).get('state', 'unknown'),
                     'detail': status.get('type', {}).get('detail', ''),
                     'short_detail': status.get('type', {}).get('shortDetail', ''),
+                    'description': status.get('type', {}).get('description', ''),
                     'period': status.get('period', 0),
                     'display_clock': status.get('displayClock', ''),
                     'summary': status.get('summary',''),
@@ -565,7 +566,10 @@ class CricketScoreboardPlugin(BasePlugin):
                     status_text = status.get('summary','Upcoming')
                 else:
                     # Live game - show inning
-                    status_text = status.get('summary','Live')
+                    if status.get('description') == 'Innings break':
+                        status_text = status.get('description','Live')
+                    else:
+                        status_text = status.get('summary','Live')
                 
                 status_width = draw_overlay.textlength(status_text, font=self.fonts['time'])
                 status_x = (matrix_width - status_width) // 2
