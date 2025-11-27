@@ -392,8 +392,8 @@ class CricketScoreboardPlugin(BasePlugin):
         # Display the first game (rotation handled by LEDMatrix)
         #game = filtered_games[1]
         #self._display_game(game, display_mode)
-        for g in filtered_games:
-            game = filtered_games[g]
+        for i in range(len(filtered_games)):
+            game = filtered_games[i]
             self._display_game(game, display_mode)
 
     def _filter_games_by_mode(self, mode: str) -> List[Dict]:
