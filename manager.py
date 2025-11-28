@@ -607,8 +607,8 @@ class CricketScoreboardPlugin(BasePlugin):
                 venue_text = game.get('venue','')
                 venue_width = draw_overlay.textlength(venue_text, font=self.fonts['detail'])
                 venue_x = (matrix_width - venue_width) // 2
-                venue_y = matrix_height - 10
-                self._draw_text_with_outline(draw_overlay, venue_text, (venue_x, venue_y), self.fonts['detail'], fill=(255, 200, 0))
+                venue_y = matrix_height - 7
+                self._draw_text_with_outline(draw_overlay, venue_text, (venue_x, venue_y), self.fonts['detail'], fill=(255, 165, 0))
 
                 
                 # Composite and display
