@@ -250,7 +250,7 @@ class CricketScoreboardPlugin(BasePlugin):
             games = self._process_api_response(data, league_key, league_config)
 
             # Cache for league-specific interval
-            #self.cache_manager.set(cache_key, games, ttl=update_interval * 2)
+            self.cache_manager.set(cache_key, games, ttl=update_interval * 2)
             #self.cache_manager.set(cache_key, games, 120)
 
             return games
