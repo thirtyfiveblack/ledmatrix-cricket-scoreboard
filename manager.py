@@ -50,7 +50,7 @@ class CricketScoreboardPlugin(BasePlugin):
     ESPN_API_URLS = {
         'theashes.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1455609/scoreboard',
         'sheffieldshield.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1495274/scoreboard',
-        'wbbl.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1490537/scoreboard', #?dates=20251127',
+        'wbbl.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1490537/scoreboard?dates=20251127',
         'bbl.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1490534/scoreboard'
     }
 
