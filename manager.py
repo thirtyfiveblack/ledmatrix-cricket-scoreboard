@@ -305,6 +305,7 @@ class CricketScoreboardPlugin(BasePlugin):
                 'league': league_key,
                 'league_config': league_config,
                 'game_id': event.get('id'),
+                'generalClassCard': competition.get('class', {}).get('generalClassCard', 'Unknown Class'),
                 'home_team': {
                     'name': home_team.get('team', {}).get('displayName', 'Unknown'),
                     'abbrev': home_team.get('team', {}).get('abbreviation', 'UNK'),
@@ -572,10 +573,11 @@ class CricketScoreboardPlugin(BasePlugin):
                 elif status.get('state') == 'post':
                     status_text = status.get('summary','Final')
                 elif status.get('state') == 'pre':
-                    status_text = status.get('summary','Upcoming')
+                    status_text = f"{game.get('generalClassCard','')} - {status.get('summary','Upcoming')}"
                 else:
                     # Live game - show inning
-                    status_text = status.get('description','Live')
+                    #status_text = status.get('description','Live')
+                    status_text = f"{game.get('generalClassCard','')} - {status.get('description','Live')}"
                 
                 status_width = draw_overlay.textlength(status_text, font=self.fonts['time'])
                 status_x = (matrix_width - status_width) // 2
