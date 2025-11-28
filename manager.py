@@ -72,7 +72,7 @@ class CricketScoreboardPlugin(BasePlugin):
 
         # Global settings
         self.global_config = config
-        self.display_duration = config.get('display_duration', 15)
+        self.display_duration = config.get('display_duration', 5)
         self.show_records = config.get('show_records', False)
         self.show_ranking = config.get('show_ranking', False)
 
