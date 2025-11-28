@@ -390,11 +390,12 @@ class CricketScoreboardPlugin(BasePlugin):
             return
 
         # Display the first game (rotation handled by LEDMatrix)
-        game = filtered_games[0]
-        self._display_game(game, display_mode)
-        #for i in range(len(filtered_games)):
-            #game = filtered_games[i]
-            #self._display_game(game, display_mode)
+        #game = filtered_games[0]
+        #self._display_game(game, display_mode)
+        for i in range(len(filtered_games)):
+            game = filtered_games[i]
+            self._display_game(game, display_mode)
+            time.sleep(4)
 
     def _filter_games_by_mode(self, mode: str) -> List[Dict]:
         """Filter games based on display mode and per-league settings."""
