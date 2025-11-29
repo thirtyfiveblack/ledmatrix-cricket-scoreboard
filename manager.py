@@ -319,9 +319,10 @@ class CricketScoreboardPlugin(BasePlugin):
                     #'score': int(home_team.get('score', 0)),
                     'score': home_team.get('score', 'Unknown'),
                     'logo': home_team.get('team', {}).get('logo'),
-                    'wickets': home_team_batting.get('wickets',0),
-                    'runs': home_team_batting.get('runs',0),
-                    'overs': home_team_batting.get('overs',0)
+                    if home_team_batting_one:
+                        'wickets': home_team_batting_one.get('wickets',0),
+                        'runs': home_team_batting_one.get('runs',0),
+                        'overs': home_team_batting_one.get('overs',0)
                 },
                 'away_team': {
                     'name': away_team.get('team', {}).get('displayName', 'Unknown'),
@@ -329,9 +330,10 @@ class CricketScoreboardPlugin(BasePlugin):
                     #'score': int(away_team.get('score', 0)),
                     'score': away_team.get('score', 'Unknown'),
                     'logo': away_team.get('team', {}).get('logo'),
-                    'wickets': away_team_batting.get('wickets',0),
-                    'runs': away_team_batting.get('runs',0),
-                    'overs': away_team_batting.get('overs',0)
+                    if away_team_batting_one:
+                        'wickets': away_team_batting_one.get('wickets',0),
+                        'runs': away_team_batting_one.get('runs',0),
+                        'overs': away_team_batting_one.get('overs',0)
                 },
                 'status': {
                     'state': status.get('type', {}).get('state', 'unknown'),
