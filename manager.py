@@ -585,10 +585,10 @@ class CricketScoreboardPlugin(BasePlugin):
                 home_score_text_y = (matrix_height // 2) - 5
                 home_overs = str(home_team.get('overs', 0))
                 home_overs_text = f"{home_overs} Overs"
-                home_overs_text = home_overs_text.replace(".0 ","")
+                home_overs_text = home_overs_text.replace(".0 "," ")
                 home_overs_text_width = draw_overlay.textlength(home_overs_text, font=self.fonts['detail'])
                 home_overs_text_x = 10
-                home_overs_text_y = (matrix_height // 2) + 5
+                home_overs_text_y = (matrix_height // 2) + 7
                 if home_score_text != "0/0":
                     self._draw_text_with_outline(draw_overlay, home_score_text, (home_score_text_x, home_score_text_y), self.fonts['rank'], fill=(255, 255, 255))
                     self._draw_text_with_outline(draw_overlay, home_overs_text, (home_overs_text_x, home_overs_text_y), self.fonts['detail'], fill=(255, 255, 255))
@@ -597,14 +597,14 @@ class CricketScoreboardPlugin(BasePlugin):
                 away_runs = str(away_team.get('runs', 0))
                 away_score_text = f"{away_wickets}/{away_runs}"
                 away_score_text_width = draw_overlay.textlength(away_score_text, font=self.fonts['rank'])
-                away_score_text_x = (matrix_width - 40)
+                away_score_text_x = (matrix_width - 60)
                 away_score_text_y = (matrix_height // 2) - 5
                 away_overs = str(away_team.get('overs', 0))
                 away_overs_text = f"{away_overs} Overs"
-                away_overs_text = away_overs_text.replace(".0 ","")
+                away_overs_text = away_overs_text.replace(".0 "," ")
                 away_overs_text_width = draw_overlay.textlength(away_overs_text, font=self.fonts['detail'])
-                away_overs_text_x = (matrix_width - 40)
-                away_overs_text_y = (matrix_height // 2) + 5
+                away_overs_text_x = (matrix_width - 60)
+                away_overs_text_y = (matrix_height // 2) + 7
                 if away_score_text != "0/0":
                     self._draw_text_with_outline(draw_overlay, away_score_text, (away_score_text_x, away_score_text_y), self.fonts['rank'], fill=(255, 255, 255))
                     self._draw_text_with_outline(draw_overlay, away_overs_text, (away_overs_text_x, away_overs_text_y), self.fonts['detail'], fill=(255, 255, 255))
