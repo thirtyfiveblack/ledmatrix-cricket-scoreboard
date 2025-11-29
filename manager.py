@@ -297,10 +297,10 @@ class CricketScoreboardPlugin(BasePlugin):
             home_team = next((c for c in competitors if c.get('homeAway') == 'home'), None)
             away_team = next((c for c in competitors if c.get('homeAway') == 'away'), None)
             
-            home_team_linescores = home_team.get('linescores', [{}])
+            home_team_linescores = home_team.get('linescores', [])
             home_team_batting_one = next((c for c in home_team_linescores if c.get('isBatting') == 'true' and c.get('period') <= 2), None)
             home_team_batting_two = next((c for c in home_team_linescores if c.get('isBatting') == 'true' and c.get('period') >= 3), None)
-            away_team_linescores = away_team.get('linescores', [{}])
+            away_team_linescores = away_team.get('linescores', [])
             away_team_batting_one = next((c for c in away_team_linescores if c.get('isBatting') == 'true' and c.get('period') <= 2), None)
             away_team_batting_two = next((c for c in away_team_linescores if c.get('isBatting') == 'true' and c.get('period') >= 3), None)
             
