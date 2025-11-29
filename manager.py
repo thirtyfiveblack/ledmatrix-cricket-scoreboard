@@ -582,16 +582,24 @@ class CricketScoreboardPlugin(BasePlugin):
                 home_score_text = f"{home_wickets}/{home_runs}"
                 home_score_text_width = draw_overlay.textlength(home_score_text, font=self.fonts['rank'])
                 home_score_text_x = 10
-                home_score_text_y = (matrix_height // 2)
-                self._draw_text_with_outline(draw_overlay, home_score_text, (home_score_text_x, home_score_text_y), self.fonts['rank'], fill=(255, 255, 255))
+                home_score_text_y = (matrix_height // 2) - 5
+                home_overs = str(home_team.get('overs', 0))
+                home_overs_text = f"{home_overs} Overs"
+                home_overs_text_width = draw_overlay.textlength(home_overs_text, font=self.fonts['rank'])
+                home_overs_text_x = 10
+                home_overs_text_y = (matrix_height // 2) + 5
+                if home_score_text <> "0/0":
+                    self._draw_text_with_outline(draw_overlay, home_score_text, (home_score_text_x, home_score_text_y), self.fonts['rank'], fill=(255, 255, 255))
+                    self._draw_text_with_outline(draw_overlay, home_overs_text, (home_overs_text_x, home_overs_text_y), self.fonts['rank'], fill=(255, 255, 255))
 
                 away_wickets = str(away_team.get('wickets', 0))
                 away_runs = str(away_team.get('runs', 0))
                 away_score_text = f"{away_wickets}/{away_runs}"
                 away_score_text_width = draw_overlay.textlength(away_score_text, font=self.fonts['rank'])
                 away_score_text_x = matrix_width - 30
-                away_score_text_y = matrix_height // 2
-                self._draw_text_with_outline(draw_overlay, away_score_text, (away_score_text_x, away_score_text_y), self.fonts['rank'], fill=(255, 255, 255))
+                away_score_text_y = (matrix_height // 2) - 5
+                if away_score_text <> "0/0":
+                    self._draw_text_with_outline(draw_overlay, away_score_text, (away_score_text_x, away_score_text_y), self.fonts['rank'], fill=(255, 255, 255))
                 
                 # Inning/Status (top center)
                 if status.get('description') == 'Innings break':
