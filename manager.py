@@ -316,12 +316,8 @@ class CricketScoreboardPlugin(BasePlugin):
                 'home_team': {
                     'name': home_team.get('team', {}).get('displayName', 'Unknown'),
                     'abbrev': home_team.get('team', {}).get('abbreviation', 'UNK'),
-                    #'score': int(home_team.get('score', 0)),
                     'score': home_team.get('score', 'Unknown'),
                     'logo': home_team.get('team', {}).get('logo')
-                    #'wickets': home_team_batting_one.get('wickets',0),
-                    #'runs': home_team_batting_one.get('runs',0),
-                    #'overs': home_team_batting_one.get('overs',0)
                 },
                 'away_team': {
                     'name': away_team.get('team', {}).get('displayName', 'Unknown'),
@@ -329,9 +325,6 @@ class CricketScoreboardPlugin(BasePlugin):
                     #'score': int(away_team.get('score', 0)),
                     'score': away_team.get('score', 'Unknown'),
                     'logo': away_team.get('team', {}).get('logo')
-                    #if away_team_batting_one: 'wickets': away_team_batting_one.get('wickets',0) else 0
-                    #'runs': away_team_batting_one.get('runs',0),
-                    #'overs': away_team_batting_one.get('overs',0)
                 },
                 'status': {
                     'state': status.get('type', {}).get('state', 'unknown'),
@@ -352,7 +345,13 @@ class CricketScoreboardPlugin(BasePlugin):
                     'runs': home_team_batting_one.get('runs',0),
                     'overs': home_team_batting_one.get('overs',0)
                 })
-
+            if away_team_batting_one:
+                game['away_team'].update({
+                    'wickets': away_team_batting_one.get('wickets',0),
+                    'runs': away_team_batting_one.get('runs',0),
+                    'overs': away_team_batting_one.get('overs',0)
+                })
+            
             return game
 
         except Exception as e:
@@ -583,7 +582,7 @@ class CricketScoreboardPlugin(BasePlugin):
                 home_score_text_width = draw_overlay.textlength(home_score_text, font=self.fonts['time'])
                 home_score_text_x = 20
                 home_score_text_y = (matrix_height // 2)
-                self._draw_text_with_outline(draw_overlay, home_score_text, (home_score_text_x, home_score_text_y), self.fonts['time'], fill=(0, 0, 0))                
+                self._draw_text_with_outline(draw_overlay, home_score_text, (home_score_text_x, home_score_text_y), self.fonts['time'], fill=(255, 255, 255))                
 
                 # Inning/Status (top center)
                 if status.get('description') == 'Innings break':
