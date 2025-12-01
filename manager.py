@@ -344,6 +344,7 @@ class CricketScoreboardPlugin(BasePlugin):
                     'session': status.get('session',''),
                 },
                 'start_time': event.get('date', ''),
+                'event_desc': event.get('description', ''),
                 'venue': competition.get('venue', {}).get('fullName', 'Unknown Venue')
             }
             if home_team_batting_one:
@@ -632,6 +633,7 @@ class CricketScoreboardPlugin(BasePlugin):
                     #status_text = f"{game.get('generalClassCard','')} - {status.get('description','Live')}"
 
                 #status_text = f"{game.get('generalClassCard','')} - {game.get('venue','')}"
+                status_text = status.get('event_desc','')
                 
                 status_width = draw_overlay.textlength(status_text, font=self.fonts['time'])
                 status_x = (matrix_width - status_width) // 2
