@@ -647,7 +647,7 @@ class CricketScoreboardPlugin(BasePlugin):
                 self._draw_text_with_outline(draw_overlay, status_text, (status_x, status_y), self.fonts['time'], fill=(0, 255, 0))
                 
                 session_text = status.get('session','')
-                session_text = f"{game.get('comp_desc', {}) - status.get('session','')}"
+                session_text = f"{game.get('comp_desc', {})} - {status.get('session','')}"
                 session_width = draw_overlay.textlength(session_text, font=self.fonts['score'])
                 session_x = (matrix_width - session_width) // 2
                 session_y = 11
