@@ -592,7 +592,7 @@ class CricketScoreboardPlugin(BasePlugin):
                 
                 home_wickets = str(home_team.get('wickets', 0))
                 home_runs = str(home_team.get('runs', 0))
-                if home_wickets == 10:
+                if home_wickets == "10":
                     home_score_text = f"{home_runs}"
                 else:
                     home_score_text = f"{home_wickets}/{home_runs}"
@@ -611,7 +611,7 @@ class CricketScoreboardPlugin(BasePlugin):
 
                 away_wickets = str(away_team.get('wickets', 0))
                 away_runs = str(away_team.get('runs', 0))
-                if away_wickets == 10:
+                if away_wickets == "10":
                     away_score_text = f"{away_runs}"
                 else:
                     away_score_text = f"{away_wickets}/{away_runs}"
