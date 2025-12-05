@@ -2,6 +2,8 @@
 
 A plugin for [LEDMatrix](https://github.com/ChuckBuilds/LEDMatrix) that displays live, recent, and upcoming cricket games.
 
+I'm still actively developing this project, my LED matrix is 5 panels wide & 1 panel high. 64*64 LEDs.
+
 ## Features
 
 - **Multiple League Support**: The Ashes, Sheffield Shield, WBBL & BBL
