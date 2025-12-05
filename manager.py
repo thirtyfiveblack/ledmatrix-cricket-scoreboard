@@ -446,10 +446,10 @@ class CricketScoreboardPlugin(BasePlugin):
 
             elif mode == 'cricket_recent' and state == 'post':
                 # Check recent games limit for this league
-                recent_limit = league_config.get('recent_games_to_show', 5)
-                recent_count = len([g for g in filtered if g.get('league') == league_key and g.get('status', {}).get('state') == 'post'])
-                if recent_count >= recent_limit:
-                    continue
+                #recent_limit = league_config.get('recent_games_to_show', 5)
+                #recent_count = len([g for g in filtered if g.get('league') == league_key and g.get('status', {}).get('state') == 'post'])
+                #if recent_count >= recent_limit:
+                    #continue
                 filtered.append(game)
 
             elif mode == 'cricket_upcoming' and state == 'pre':
