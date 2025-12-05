@@ -629,7 +629,8 @@ class CricketScoreboardPlugin(BasePlugin):
                     self._draw_text_with_outline(draw_overlay, away_overs_text, (away_overs_text_x, away_overs_text_y), self.fonts['detail'], fill=(255, 255, 255))
                 
                 # Inning/Status (top center)
-                status_text = game.get('event_name','')
+                #status_text = game.get('event_name','')
+                status_text = f"{game.get('league','')}-{game.get('league_config','')}"
                 
                 status_width = draw_overlay.textlength(status_text, font=self.fonts['time'])
                 status_x = (matrix_width - status_width) // 2
