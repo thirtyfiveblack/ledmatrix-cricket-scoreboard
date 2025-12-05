@@ -4,6 +4,8 @@ A plugin for [LEDMatrix](https://github.com/ChuckBuilds/LEDMatrix) that displays
 
 I'm still actively developing this project, my LED matrix is 5 panels wide & 1 panel high. 64*64 LEDs.
 
+![My Matrix](https://github.com/thirtyfiveblack/ledmatrix-cricket-scoreboard/blob/main/CricketMatrix.jpeg)
+
 ## Features
 
 - **Multiple League Support**: The Ashes, Sheffield Shield, WBBL & BBL
