@@ -630,7 +630,7 @@ class CricketScoreboardPlugin(BasePlugin):
                 
                 # Inning/Status (top center)
                 #status_text = game.get('event_name','')
-                status_text = f"{game.get('league','')}-{game.get('league_config','')}"
+                status_text = f"{game.get('league','')}"
                 
                 status_width = draw_overlay.textlength(status_text, font=self.fonts['time'])
                 status_x = (matrix_width - status_width) // 2
