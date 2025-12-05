@@ -592,7 +592,10 @@ class CricketScoreboardPlugin(BasePlugin):
                 
                 home_wickets = str(home_team.get('wickets', 0))
                 home_runs = str(home_team.get('runs', 0))
-                home_score_text = f"{home_wickets}/{home_runs}"
+                if home_wickets == 10:
+                    home_score_text = f"{home_runs}"
+                else:
+                    home_score_text = f"{home_wickets}/{home_runs}"
                 home_score_text_width = draw_overlay.textlength(home_score_text, font=self.fonts['rank'])
                 home_score_text_x = 5
                 home_score_text_y = (matrix_height // 2) - 5
@@ -608,7 +611,10 @@ class CricketScoreboardPlugin(BasePlugin):
 
                 away_wickets = str(away_team.get('wickets', 0))
                 away_runs = str(away_team.get('runs', 0))
-                away_score_text = f"{away_wickets}/{away_runs}"
+                if away_wickets == 10:
+                    away_score_text = f"{away_runs}"
+                else:
+                    away_score_text = f"{away_wickets}/{away_runs}"
                 away_score_text_width = draw_overlay.textlength(away_score_text, font=self.fonts['rank'])
                 away_score_text_x = (matrix_width - away_score_text_width - 5)
                 away_score_text_y = (matrix_height // 2) - 5
@@ -644,10 +650,10 @@ class CricketScoreboardPlugin(BasePlugin):
                 #self._draw_text_with_outline(draw_overlay, score_text, (score_x, score_y), self.fonts['detail'], fill=(255, 255, 255))
 
                 summary_text = status.get('summary','')
-                summary_width = draw_overlay.textlength(summary_text, font=self.fonts['detail'])
+                summary_width = draw_overlay.textlength(summary_text, font=self.fonts['score'])
                 summary_x = (matrix_width - summary_width) // 2
                 summary_y = (matrix_height // 2) + 15
-                self._draw_text_with_outline(draw_overlay, summary_text, (summary_x, summary_y), self.fonts['detail'], fill=(255, 200, 0))
+                self._draw_text_with_outline(draw_overlay, summary_text, (summary_x, summary_y), self.fonts['score'], fill=(255, 200, 0))
                 
                 venue_text = f"{game.get('generalClassCard','')} - {game.get('venue','')}"
                 venue_width = draw_overlay.textlength(venue_text, font=self.fonts['detail'])
