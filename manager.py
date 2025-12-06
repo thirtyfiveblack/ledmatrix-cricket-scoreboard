@@ -608,12 +608,16 @@ class CricketScoreboardPlugin(BasePlugin):
                 
                 home_wickets = str(home_team.get('wickets', 0))
                 home_runs = str(home_team.get('runs', 0))
-                home_wickets_2 = str(home_team.get('wickets2nd', 0))
-                home_runs_2 = str(home_team.get('runs2nd', 0))
+                home_wickets_2 = home_team.get('wickets2nd', 0)
+                home_runs_2 = home_team.get('runs2nd', 0)
                 if home_wickets == "10":
                     home_score_text = f"{home_runs}"
                 else:
                     home_score_text = f"{home_wickets}/{home_runs}"
+                if home_wickets_2 == 10:
+                    home_score_text = f"{home_score_text} & {home_runs_2}"
+                if home_runs_2 > 0:
+                    home_score_text = f"{home_score_text} & {home_wickets_2}/{home_runs_2}"
                 
                 home_score_text_width = draw_overlay.textlength(home_score_text, font=self.fonts['rank'])
                 home_score_text_x = 5
@@ -631,10 +635,17 @@ class CricketScoreboardPlugin(BasePlugin):
 
                 away_wickets = str(away_team.get('wickets', 0))
                 away_runs = str(away_team.get('runs', 0))
+                away_wickets_2 = away_team.get('wickets2nd', 0)
+                away_runs_2 = away_team.get('runs2nd', 0)
                 if away_wickets == "10":
                     away_score_text = f"{away_runs}"
                 else:
                     away_score_text = f"{away_wickets}/{away_runs}"
+                if away_wickets_2 == 10:
+                    away_score_text = f"{away_score_text} & {away_runs_2}"
+                if away_runs_2 > 0:
+                    away_score_text = f"{away_score_text} & {away_wickets_2}/{away_runs_2}"
+
                 away_score_text_width = draw_overlay.textlength(away_score_text, font=self.fonts['rank'])
                 away_score_text_x = (matrix_width - away_score_text_width - 5)
                 away_score_text_y = (matrix_height // 2) - 7
