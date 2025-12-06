@@ -359,11 +359,23 @@ class CricketScoreboardPlugin(BasePlugin):
                     'runs': home_team_batting_one.get('runs',0),
                     'overs': home_team_batting_one.get('overs',0)
                 })
+            if home_team_batting_two:
+                game['home_team'].update({
+                    'wickets2nd': home_team_batting_two.get('wickets',0),
+                    'runs2nd': home_team_batting_two.get('runs',0),
+                    'overs2nd': home_team_batting_two.get('overs',0)
+                })
             if away_team_batting_one:
                 game['away_team'].update({
                     'wickets': away_team_batting_one.get('wickets',0),
                     'runs': away_team_batting_one.get('runs',0),
                     'overs': away_team_batting_one.get('overs',0)
+                })
+            if away_team_batting_two:
+                game['away_team'].update({
+                    'wickets2nd': away_team_batting_two.get('wickets',0),
+                    'runs2nd': away_team_batting_two.get('runs',0),
+                    'overs2nd': away_team_batting_two.get('overs',0)
                 })
             
             return game
@@ -596,14 +608,18 @@ class CricketScoreboardPlugin(BasePlugin):
                 
                 home_wickets = str(home_team.get('wickets', 0))
                 home_runs = str(home_team.get('runs', 0))
+                home_wickets_2 = str(home_team.get('wickets2nd', 0))
+                home_runs_2 = str(home_team.get('runs2nd', 0))
                 if home_wickets == "10":
                     home_score_text = f"{home_runs}"
                 else:
                     home_score_text = f"{home_wickets}/{home_runs}"
+                
                 home_score_text_width = draw_overlay.textlength(home_score_text, font=self.fonts['rank'])
                 home_score_text_x = 5
                 home_score_text_y = (matrix_height // 2) - 7
                 home_overs = str(home_team.get('overs', 0))
+                home_overs_2 = str(home_team.get('overs2nd', 0))
                 home_overs_text = f"{home_overs} Overs"
                 home_overs_text = home_overs_text.replace(".0 "," ")
                 home_overs_text_width = draw_overlay.textlength(home_overs_text, font=self.fonts['detail'])
