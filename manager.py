@@ -628,6 +628,10 @@ class CricketScoreboardPlugin(BasePlugin):
                     home_overs_text = f"({home_overs})"
                 else:
                     home_overs_text = f"{home_overs} Overs"
+                if home_wickets_2 == "10":
+                    home_overs_text = f"{home_overs_text} & ({home_overs_2})"
+                if home_overs_2 > 0:
+                    home_overs_text = f"{home_overs_text} & {home_overs_2} Overs"
                 home_overs_text = home_overs_text.replace(".0 "," ")
                 home_overs_text_width = draw_overlay.textlength(home_overs_text, font=self.fonts['detail'])
                 home_overs_text_x = 5
@@ -659,9 +663,9 @@ class CricketScoreboardPlugin(BasePlugin):
                 else:
                     away_overs_text = f"{away_overs} Overs"
                 if away_wickets_2 == "10":
-                    away_overs_text = f"{away_overs_text} & ({away_overs})"
+                    away_overs_text = f"{away_overs_text} & ({away_overs_2})"
                 if away_overs_2 > 0:
-                    away_overs_text = f"{away_overs_text} & {away_overs} Overs"
+                    away_overs_text = f"{away_overs_text} & {away_overs_2} Overs"
                 away_overs_text = away_overs_text.replace(".0 "," ")
                 away_overs_text_width = draw_overlay.textlength(away_overs_text, font=self.fonts['detail'])
                 away_overs_text_x = (matrix_width - away_overs_text_width - 5)
