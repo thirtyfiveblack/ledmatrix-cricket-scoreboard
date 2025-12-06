@@ -623,7 +623,7 @@ class CricketScoreboardPlugin(BasePlugin):
                 home_score_text_x = 5
                 home_score_text_y = (matrix_height // 2) - 7
                 home_overs = str(home_team.get('overs', 0))
-                home_overs_2 = str(home_team.get('overs2nd', 0))
+                home_overs_2 = home_team.get('overs2nd', 0)
                 if home_wickets == "10":
                     home_overs_text = f"({home_overs})"
                 else:
