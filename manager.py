@@ -653,7 +653,7 @@ class CricketScoreboardPlugin(BasePlugin):
                 away_score_text_x = (matrix_width - away_score_text_width - 5)
                 away_score_text_y = (matrix_height // 2) - 7
                 away_overs = str(away_team.get('overs', 0))
-                away_overs_2 = str(away_team.get('overs2nd', 0))
+                away_overs_2 = away_team.get('overs2nd', 0)
                 if away_wickets == "10":
                     away_overs_text = f"({away_overs})"
                 else:
