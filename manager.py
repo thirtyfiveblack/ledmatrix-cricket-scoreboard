@@ -614,7 +614,7 @@ class CricketScoreboardPlugin(BasePlugin):
                     home_score_text = f"{home_runs}"
                 else:
                     home_score_text = f"{home_wickets}/{home_runs}"
-                if home_runs_2 > 0:
+                if home_runs_2 > 0 and home_wickets_2 < 10:
                     home_score_text = f"{home_score_text} & {home_wickets_2}/{home_runs_2}"
                 if home_wickets_2 == 10:
                     home_score_text = f"{home_score_text} & {home_runs_2}"
@@ -628,9 +628,9 @@ class CricketScoreboardPlugin(BasePlugin):
                     home_overs_text = f"({home_overs})"
                 else:
                     home_overs_text = f"{home_overs} Overs"
-                if home_overs_2 > 0:
+                if home_overs_2 > 0 and home_wickets_2 < 10:
                     home_overs_text = f"{home_overs_text} & {home_overs_2} Overs"
-                if home_wickets_2 == "10":
+                if home_wickets_2 == 10:
                     home_overs_text = f"{home_overs_text} & ({home_overs_2})"
 
                 home_overs_text = home_overs_text.replace(".0 "," ")
@@ -649,7 +649,7 @@ class CricketScoreboardPlugin(BasePlugin):
                     away_score_text = f"{away_runs}"
                 else:
                     away_score_text = f"{away_wickets}/{away_runs}"
-                if away_runs_2 > 0:
+                if away_runs_2 > 0 and away_wickets_2 <= 9:
                     away_score_text = f"{away_score_text} & {away_wickets_2}/{away_runs_2}"
                 if away_wickets_2 == 10:
                     away_score_text = f"{away_score_text} & {away_runs_2}"
@@ -663,9 +663,9 @@ class CricketScoreboardPlugin(BasePlugin):
                     away_overs_text = f"({away_overs})"
                 else:
                     away_overs_text = f"{away_overs} Overs"
-                if away_overs_2 > 0:
+                if away_overs_2 > 0 and away_wickets_2 <= 9:
                     away_overs_text = f"{away_overs_text} & {away_overs_2} Overs"
-                if away_wickets_2 == "10":
+                if away_wickets_2 == 10:
                     away_overs_text = f"{away_overs_text} & ({away_overs_2})"
 
                 away_overs_text = away_overs_text.replace(".0 "," ")
