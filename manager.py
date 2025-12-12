@@ -711,7 +711,7 @@ class CricketScoreboardPlugin(BasePlugin):
                 
                 
                 date_string = game.get('start_time','')
-                format_string = "%Y-%m-%dT%H:%M:%SZ"
+                format_string = "%Y-%m-%dT%H:%MZ"
                 dt_object_naive = datetime.strptime(date_string, format_string)
                 dt_object_aware = dt_object_naive.replace(tzinfo=pytz.utc)
                 unix_timestamp = dt_object_aware.timestamp()
