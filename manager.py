@@ -711,11 +711,15 @@ class CricketScoreboardPlugin(BasePlugin):
                 
                 
                 date_string = game.get('start_time','')
-                format_string = "%Y-%m-%dT%H:%MZ"
-                dt_object_naive = datetime.strptime(date_string, format_string)
-                dt_object_aware = dt_object_naive.replace(tzinfo=pytz.utc)
-                unix_timestamp = dt_object_aware.timestamp()
-                local_datetime = unix_timestamp.astimezone()
+                #format_string = "%Y-%m-%dT%H:%MZ"
+                #dt_object_naive = datetime.strptime(date_string, format_string)
+                #dt_object_aware = dt_object_naive.replace(tzinfo=pytz.utc)
+                #unix_timestamp = dt_object_aware.timestamp()
+                
+                utc_datetime = parser.isoparse(date_string)
+                #unix_timestamp = utc_datetime.timestamp()
+                
+                local_datetime = utc_datetime.astimezone()
                 formatted_local_time = local_datetime.strftime("%Y-%m-%d %I:%M %p %Z")
                 starttime_text = f"{formatted_local_time}"
                 starttime_width = draw_overlay.textlength(starttime_text, font=self.fonts['score'])
