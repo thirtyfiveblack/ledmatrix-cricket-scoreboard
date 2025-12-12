@@ -49,6 +49,7 @@ class CricketScoreboardPlugin(BasePlugin):
     # ESPN API endpoints for cricket leagues
     ESPN_API_URLS = {
         'theashes.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1455609/scoreboard',
+        'icctestchamp.2527': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1472510/scoreboard',
         'sheffieldshield.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1495274/scoreboard',
         'wbbl.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1490537/scoreboard', #?dates=20251127',
         'bbl.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1490534/scoreboard'
@@ -57,6 +58,7 @@ class CricketScoreboardPlugin(BasePlugin):
     # League display names
     LEAGUE_NAMES = {
         'theashes.2526': 'The Ashes 2025/26',
+        'icctestchamp.2527': 'ICC World Test Championship 2025-2027',
         'sheffieldshield.2526': 'Sheffield Shield 2025/26',
         'wbbl.2526': 'WBBL 2025/26',
         'bbl.2526': 'BBL 2025/26'
@@ -706,6 +708,21 @@ class CricketScoreboardPlugin(BasePlugin):
                 summary_x = (matrix_width - summary_width) // 2
                 summary_y = (matrix_height // 2) + 15
                 self._draw_text_with_outline(draw_overlay, summary_text, (summary_x, summary_y), self.fonts['score'], fill=(255, 200, 0))
+                
+                
+                date_string = game.get('start_time','')
+                format_string = "%Y-%m-%dT%H:%M:%SZ"
+                dt_object_naive = datetime.strptime(date_string, format_string)
+                dt_object_aware = dt_object_naive.replace(tzinfo=pytz.utc)
+                unix_timestamp = dt_object_aware.timestamp()
+                local_datetime = utc_datetime.astimezone()
+                formatted_local_time = local_datetime.strftime("%Y-%m-%d %I:%M %p %Z")
+                starttime_text = f"{formatted_local_time}"
+                starttime_width = draw_overlay.textlength(starttime_text, font=self.fonts['score'])
+                starttime_x = (matrix_width - starttime_width) // 2
+                starttime_y = (matrix_height // 2) + 5
+                self._draw_text_with_outline(draw_overlay, starttime_text, (starttime_x, starttime_y), self.fonts['score'], fill=(157, 0, 255))
+                
                 
                 #venue_text = f"{game.get('generalClassCard','')} - {game.get('venue','')}"
                 venue_text = f"{game.get('venue','')}"
