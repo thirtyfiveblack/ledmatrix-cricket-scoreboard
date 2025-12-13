@@ -715,18 +715,13 @@ class CricketScoreboardPlugin(BasePlugin):
                 utc_datetime = parser.isoparse(date_string)
                 local_datetime = utc_datetime.astimezone()
                 formatted_local_time = local_datetime.strftime("%A %B %-d, %Y")
-                if local_datetime.date() == datetime.today().date():
-                    starttime_text = "Today!"
-                elif local_datetime.date() < datetime.today().date():
+                if local_datetime.date() > datetime.today().date():
                     starttime_text = f"{formatted_local_time}"
-                else:
-                    starttime_text = ""
-                starttime_width = draw_overlay.textlength(starttime_text, font=self.fonts['score'])
-                starttime_x = (matrix_width - starttime_width) // 2
-                starttime_y = (matrix_height // 2) + 5
-                self._draw_text_with_outline(draw_overlay, starttime_text, (starttime_x, starttime_y), self.fonts['score'], fill=(157, 0, 255))
-                
-                
+                    starttime_width = draw_overlay.textlength(starttime_text, font=self.fonts['score'])
+                    starttime_x = (matrix_width - starttime_width) // 2
+                    starttime_y = (matrix_height // 2) + 5
+                    self._draw_text_with_outline(draw_overlay, starttime_text, (starttime_x, starttime_y), self.fonts['score'], fill=(157, 0, 255))
+                                
                 #venue_text = f"{game.get('generalClassCard','')} - {game.get('venue','')}"
                 venue_text = f"{game.get('venue','')}"
                 venue_width = draw_overlay.textlength(venue_text, font=self.fonts['detail'])
