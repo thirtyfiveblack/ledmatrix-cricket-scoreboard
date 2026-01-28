@@ -53,7 +53,8 @@ class CricketScoreboardPlugin(BasePlugin):
         'icctestchamp.2527': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1472510/scoreboard',
         'sheffieldshield.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1495274/scoreboard',
         'wbbl.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1490537/scoreboard', #?dates=20251127',
-        'bbl.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1490534/scoreboard'
+        'bbl.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1490534/scoreboard',
+        'mt20wc.26': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1502138/scoreboard'
     }
 
     # League display names
