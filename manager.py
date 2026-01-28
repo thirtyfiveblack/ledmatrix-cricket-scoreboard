@@ -63,7 +63,8 @@ class CricketScoreboardPlugin(BasePlugin):
         'icctestchamp.2527': 'ICC World Test Championship 2025-2027',
         'sheffieldshield.2526': 'Sheffield Shield 2025/26',
         'wbbl.2526': 'WBBL 2025/26',
-        'bbl.2526': 'BBL 2025/26'
+        'bbl.2526': 'BBL 2025/26',
+        'mt20wc.26': 'Mens T20 World Cup 2026'
     }
 
     def __init__(self, plugin_id: str, config: Dict[str, Any],
