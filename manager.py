@@ -49,21 +49,13 @@ class CricketScoreboardPlugin(BasePlugin):
 
     # ESPN API endpoints for cricket leagues
     ESPN_API_URLS = {
-        'theashes.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1455609/scoreboard',
         'icctestchamp.2527': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1472510/scoreboard',
-        'sheffieldshield.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1495274/scoreboard',
-        'wbbl.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1490537/scoreboard', #?dates=20251127',
-        'bbl.2526': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1490534/scoreboard',
         'mt20wc.26': 'https://site.api.espn.com/apis/site/v2/sports/cricket/1502138/scoreboard'
     }
 
     # League display names
     LEAGUE_NAMES = {
-        'theashes.2526': 'The Ashes 2025/26',
         'icctestchamp.2527': 'ICC World Test Championship 2025-2027',
-        'sheffieldshield.2526': 'Sheffield Shield 2025/26',
-        'wbbl.2526': 'WBBL 2025/26',
-        'bbl.2526': 'BBL 2025/26',
         'mt20wc.26': 'Mens T20 World Cup 2026'
     }
 
