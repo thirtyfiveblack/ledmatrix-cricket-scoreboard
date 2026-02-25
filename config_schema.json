@@ -97,7 +97,7 @@
     },
     "logo_dir": {
       "type": "string",
-      "default": "assets/sports/soccer_logos",
+      "default": "plugin-repos/cricket-scoreboard/logos",
       "description": "Directory path for team logos"
     },
     "background_service": {
@@ -142,13 +142,13 @@
     "leagues": {
       "type": "object",
       "properties": {
-        "theashes.2526": {
+        "icctestchamp.2527": {
           "type": "object",
           "properties": {
             "enabled": {
               "type": "boolean",
               "default": true,
-              "description": "Enable The Ashes games"
+              "description": "Enable The ICC World Test Championship games"
             },
             "favorite_teams": {
               "type": "array",
@@ -198,13 +198,13 @@
           },
           "additionalProperties": false
         },
-        "wbbl.2526": {
+        "mt20wc.26": {
           "type": "object",
           "properties": {
             "enabled": {
               "type": "boolean",
               "default": true,
-              "description": "Enable WBBL games"
+              "description": "Enable The Mens T20 World Cup games"
             },
             "favorite_teams": {
               "type": "array",
@@ -250,118 +250,6 @@
               "minimum": 1,
               "maximum": 20,
               "description": "Maximum number of upcoming games to display"
-            }
-          },
-          "additionalProperties": false
-        },
-        "bbl.2526": {
-          "type": "object",
-          "properties": {
-            "enabled": {
-              "type": "boolean",
-              "default": true,
-              "description": "Enable BBL games"
-            },
-            "favorite_teams": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "description": "Team name or abbreviation"
-              },
-              "uniqueItems": true,
-              "maxItems": 20,
-              "description": "List of favorite teams to prioritize"
-            },
-            "display_modes": {
-              "type": "object",
-              "properties": {
-                "live": {
-                  "type": "boolean",
-                  "default": true,
-                  "description": "Show live games"
-                },
-                "recent": {
-                  "type": "boolean",
-                  "default": true,
-                  "description": "Show recently completed games"
-                },
-                "upcoming": {
-                  "type": "boolean",
-                  "default": true,
-                  "description": "Show upcoming games"
-                }
-              },
-              "additionalProperties": false
-            },
-            "recent_games_to_show": {
-              "type": "integer",
-              "default": 5,
-              "minimum": 1,
-              "maximum": 20,
-              "description": "Maximum number of recent games to display"
-            },
-            "upcoming_games_to_show": {
-              "type": "integer",
-              "default": 10,
-              "minimum": 1,
-              "maximum": 20,
-              "description": "Maximum number of upcoming games to display"
-            }
-          },
-          "additionalProperties": false
-        },
-        "sheffieldshield.2526": {
-          "type": "object",
-          "properties": {
-            "enabled": {
-              "type": "boolean",
-              "default": true,
-              "description": "Enable Sheffield Shield games"
-            },
-            "favorite_teams": {
-              "type": "array",
-              "items": {
-                "type": "string",
-                "description": "Sheffield Shield team name or abbreviation"
-              },
-              "uniqueItems": true,
-              "maxItems": 20,
-              "description": "List of favorite Sheffield Shield teams to prioritize"
-            },
-            "display_modes": {
-              "type": "object",
-              "properties": {
-                "live": {
-                  "type": "boolean",
-                  "default": true,
-                  "description": "Show live Sheffield Shield games"
-                },
-                "recent": {
-                  "type": "boolean",
-                  "default": true,
-                  "description": "Show recently completed Sheffield Shield games"
-                },
-                "upcoming": {
-                  "type": "boolean",
-                  "default": true,
-                  "description": "Show upcoming Sheffield Shield games"
-                }
-              },
-              "additionalProperties": false
-            },
-            "recent_games_to_show": {
-              "type": "integer",
-              "default": 5,
-              "minimum": 1,
-              "maximum": 20,
-              "description": "Maximum number of recent Sheffield Shield games to display"
-            },
-            "upcoming_games_to_show": {
-              "type": "integer",
-              "default": 10,
-              "minimum": 1,
-              "maximum": 20,
-              "description": "Maximum number of upcoming Sheffield Shield games to display"
             }
           },
           "additionalProperties": false
