@@ -708,7 +708,7 @@ class CricketScoreboardPlugin(BasePlugin):
                 date_string = game.get('start_time','')
                 utc_datetime = parser.isoparse(date_string)
                 local_datetime = utc_datetime.astimezone()
-                formatted_local_time = local_datetime.strftime("%A %B %-d, %Y")
+                formatted_local_time = local_datetime.strftime("%I:%M%p %A %B %-d, %Y")
                 if local_datetime.date() > datetime.today().date():
                     starttime_text = f"{formatted_local_time}"
                     starttime_width = draw_overlay.textlength(starttime_text, font=self.fonts['score'])
